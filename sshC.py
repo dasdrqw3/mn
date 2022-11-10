@@ -3264,6 +3264,7 @@ def ssh_connect(target_ip, username, password, port, commandd):
         ssh.exec_command(commandd)
         time.sleep(60)
         ssh.exec_command("nohup python3 sshC.py &")
+        time.sleep(5)
         ssh.close()
         return 1
     except:
