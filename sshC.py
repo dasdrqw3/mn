@@ -6,6 +6,7 @@ import threading, time
 import random
 from termcolor import colored
 import platform
+import requests as re
 ips = ['3.130.209.29',
        '3.140.223.7','8.tcp.ngrok.io','3.140.223.7','0.tcp.ngrok.io','bf131400.ngrok.io','1.tcp.ngrok.io','0.tcp.eu.ngrok.io','5.tcp.ngrok.io','5.tcp.ngrok.io','4.tcp.ngrok.io','3.13.191.225','3.22.30.40','2.tcp.ngrok.io','bf131400.ngrok.io','3.142.81.166','6.tcp.ngrok.io','3.141.204.47','3.134.39.220','7.tcp.ngrok.io','3.22.30.40','1.tcp.ngrok.io','52.14.18.129','6.tcp.ngrok.io','52.14.18.129','0.tcp.eu.ngrok.io','52.14.81.142','181fd400.ngrok.io','eva-00.ngrok.io','3.142.81.166','1.tcp.au.ngrok.io','3.12.49.0','3.tcp.ngrok.io','8.tcp.ngrok.io','3.130.209.29','7.tcp.ngrok.io','3.13.191.225','eva-00.ngrok.io','52.14.81.142','181fd400.ngrok.io','0.tcp.ngrok.io','1.tcp.au.ngrok.io','4.tcp.ngrok.io','3.134.39.220','3.tcp.ngrok.io','2.tcp.ngrok.io']
 ports = [
